@@ -4,28 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SistemaFinanceiro {
-    private List contas;
-    private List valores;
+    private List<Conta> contas;
     public SistemaFinanceiro() {
-        contas = new ArrayList<>();
-        valores = new ArrayList<>();
+        contas = new ArrayList<Conta>();
     }
 
-    public void addcionarConta(String conta, double valor) {
-        contas.add(conta);
-        valores.add(valor);
+    public void addcionarConta(String nomeConta, double valorInicial) {
+        Conta novaConta = new Conta(nomeConta, valorInicial);
+        contas.add(novaConta);
     }
 
     public void gerarRelatorio() {
         System.out.println("== Relatório Financeiro ===");
-        for (int i = 0; i < contas.size(); i++) {
-            System.out.println("Conta: " + contas.get(i) + " - Saldo: " + valores.get(i));
+        for (Conta conta : this.contas) {
+            System.out.println("Conta: " + conta.getNome() + " - Saldo: " + conta.getSaldo());
         }
     }
 
     public void processarPagamentos(double taxa) {
-        for (int i = 0; i < valores.size(); i++) {
-            valores.set(i, valores.get(i) - taxa);
+        for (Conta conta : this.contas) {
+            conta.aplicarTaxa(taxa);
         }
     }
 }
