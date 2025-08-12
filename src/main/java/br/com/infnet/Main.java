@@ -22,5 +22,9 @@ public class Main {
 
         System.out.println("\n--- Gerando relatório final ---");
         meuSistema.gerarRelatorio();
+
+        System.out.println("Processador Exercício 2");
+        Processador processador = new Processador();
+        processador.processar("paralelepipedo");
     }
 }
