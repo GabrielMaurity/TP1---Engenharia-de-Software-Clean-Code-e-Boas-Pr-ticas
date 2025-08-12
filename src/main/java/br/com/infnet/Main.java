@@ -26,5 +26,11 @@ public class Main {
         System.out.println("Processador Exercício 2");
         Processador processador = new Processador();
         processador.processar("paralelepipedo");
+
+        System.out.println("Carrinho de Compras Exercício 3");
+        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
+        carrinhoDeCompras.adicionarProduto("Saco de arroz", 10.0, 1);
+        carrinhoDeCompras.adicionarProduto("Macarrão", 10.0, 2);
+        carrinhoDeCompras.calcularTotal();
     }
 }
