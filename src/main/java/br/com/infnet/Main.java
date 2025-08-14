@@ -21,17 +21,17 @@ public class Main {
         System.out.println("\n--- Gerando relatório final ---");
         meuSistema.gerarRelatorio();
 
-        System.out.println("Processador Exercício 2");
+        System.out.println("\nProcessador | Exercício 2");
         Processador processador = new Processador();
         processador.processar("paralelepipedo");
 
-        System.out.println("Carrinho de Compras Exercício 3");
+        System.out.println("\nCarrinho de Compras | Exercício 3");
         CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
         carrinhoDeCompras.adicionarProduto("Saco de arroz", 10.0, 1);
         carrinhoDeCompras.adicionarProduto("Macarrão", 10.0, 2);
         carrinhoDeCompras.calcularTotal();
 
-        System.out.println("Sistema Biblioteca | Exercício 4");
+        System.out.println("\nSistema Biblioteca | Exercício 4");
         SistemaBiblioteca sistemaBiblioteca = new SistemaBiblioteca();
         sistemaBiblioteca.adicionarLivro(true, "avatar");
         sistemaBiblioteca.emprestarLivro("avatar");
