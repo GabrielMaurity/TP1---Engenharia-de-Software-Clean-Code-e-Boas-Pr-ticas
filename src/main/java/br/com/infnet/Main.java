@@ -1,7 +1,5 @@
 package br.com.infnet;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         System.out.println("Iniciando o sistema...");
@@ -32,5 +30,13 @@ public class Main {
         carrinhoDeCompras.adicionarProduto("Saco de arroz", 10.0, 1);
         carrinhoDeCompras.adicionarProduto("Macarrão", 10.0, 2);
         carrinhoDeCompras.calcularTotal();
+
+        System.out.println("Sistema Biblioteca | Exercício 4");
+        SistemaBiblioteca sistemaBiblioteca = new SistemaBiblioteca();
+        sistemaBiblioteca.adicionarLivro(true, "avatar");
+        sistemaBiblioteca.emprestarLivro("avatar");
+        sistemaBiblioteca.emprestarLivro("avatar");
+        sistemaBiblioteca.devolverLivro("avatar");
+        sistemaBiblioteca.devolverLivro("avatar");
     }
 }
